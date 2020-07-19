@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test js</title>
+	
+</head>
+<body>
+	<div id="address">
+		<span>Страна:</span>
+		<div>
+			<input type="text" id="country">
+		</div>
+		<span>Область:</span>
+		<div>
+			<input type="text" id="region">
+		</div>
+		<span>Город:</span>
+		<div>
+			<input type="text" id="city">
+		</div>
+		<span>Улица:</span>
+		<div>
+			<input type="text" id="street">
+		</div>
+		<div>
+			<br><input type="button" id="send_btn" name="send" value="Отправить">
+		</div>
+	</div>
+	<div style="margin-top: 20px; visibility: hidden;" id="output_block">
+		<div id="out_title"><b>Адрес: </b></div>
+		<span id="out_county"></span>,
+		<span id="out_region"></span>,
+		<span id="out_city"></span>,
+		<span id="out_street"></span>
+	</div>
+</body>
+<script type="text/javascript">
+
+		function output(){	
+			let city = document.getElementById('city').value;
+			let street = document.getElementById('street').value;
+			let country = document.getElementById('country').value;
+			let regiion = document.getElementById('region').value;
+	
+			document.getElementById('out_city').innerHTML = city;
+			document.getElementById('out_street').innerHTML = street;
+			document.getElementById('out_county').innerHTML = country;
+			document.getElementById('out_region').innerHTML = regiion;
+
+			document.getElementById('output_block').style.visibility = "visible";
+		}
+
+	   document.getElementById('send_btn').onclick = output;
+	   
+</script>
+</html>
